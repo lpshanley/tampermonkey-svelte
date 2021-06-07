@@ -14,7 +14,7 @@ npm run dev
 
 If you do not have Tampermonkey installed yet [click here](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) to install from the chrome web store.
 
-Note: Allowing an extension access to files can have security risks. Please read and be informed about these risks prior to moving forward.
+*Note:* Allowing an extension access to files can have security risks. Please read and be informed about these risks prior to moving forward.
 
 After you install tampermonkey enable the `"Allow access to file URL's"` setting in the chrome extension settings for tampermonkey.
 
@@ -39,6 +39,12 @@ Copy **only** the header details from `dist/bundle.js`. It should look like this
 ```
 
 Add this as a new script into tampermonkey. Remember to **only** copy the header details. Once this is done you should be able to reload your webpage and being creating your script. When running `npm run dev` your source will be watched and changes will rebuild automatically, you will need to refresh the browser to pickup the new changes.
+
+***IMPORTANT NOTE*** changes outside of `/src` are not watched. If you make
+changes to files like `meta.js`, `package.json`, etc you will need to stop 
+the dev server and restart it. Changes to the header will need to be copied 
+and pasted into tampermonkey any time a change occurs. Failing to do this
+may cause expected functionality to not behave as expected.
 
 ## Files to update
 
