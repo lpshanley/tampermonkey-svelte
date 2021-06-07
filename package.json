@@ -4,13 +4,6 @@
   "description": "Tampermonkey template that uses svelte to build UserScripts",
   "author": "Lucas Shanley",
   "homepage": "https://github.com/lpshanley/tampermonkey-svelte#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lpshanley/tampermonkey-svelte.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lpshanley/tampermonkey-svelte/issues"
-  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
