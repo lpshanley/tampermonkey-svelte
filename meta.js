@@ -3,12 +3,13 @@ const { pathToFileURL } = require('url');
 const pkg = require('./package.json');
 
 const distURLBase = `https://example.com/dist`;
+const packageName = pkg.name;
 
 const production = !process.env.ROLLUP_WATCH;
 const baseUrl = !production	? path.join(__dirname, 'dist') : distURLBase;
 
 let meta = {
-    "name": production ? pkg.name : pkg.name + '-dev',
+    "name": production ? packageName : packageName + ' -> dev',
     "version": pkg.version,
     "description": pkg.description,
 	"homepage": pkg.homepage,
